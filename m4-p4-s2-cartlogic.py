@@ -1,6 +1,3 @@
-import json
-from .models import *
-
 def cookieCart(request):
 
 	#Create empty cart for now for non-logged in user
@@ -37,7 +34,5 @@ def cookieCart(request):
 				order['shipping'] = True
 		except:
 			pass
-	return {'cartItems':cartItems ,'order':order, 'items':items, 'shipping':shipping}
-
-
-	
+			
+	return {'cartItems':cartItems ,'order':order, 'items':items}
